@@ -2215,6 +2215,19 @@ lua_version and lua_subversion. For example, to activate Lua
 	:let lua_version = 5
 	:let lua_subversion = 1
 
+Optional feature, which can conceal an unnamed function as a lambda
+when it is tightly attached to a return.
+Enable this feature set the variable like this: >
+
+	:let lua_unnamed_function_to_lambda = 1
+
+Example >
+
+	foo(function(a,b) return a<b end)
+
+Conceal to >
+
+	foo(λa,b.a<b;)
 
 MAIL						*mail.vim* *ft-mail.vim*
 
